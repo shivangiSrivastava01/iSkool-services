@@ -6,9 +6,15 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.school.domain.Admin;
+import com.school.repository.SchoolManagementRepository;
 
 public class SchoolManagementServiceImplementation {
+	
+	@Autowired
+	private static SchoolManagementRepository repository;
 
 	private static HashMap<String,String> users = new HashMap<String, String>();
 	
@@ -39,8 +45,8 @@ public class SchoolManagementServiceImplementation {
 	}
 
 	public static void addUser(Admin a) {
-		
-		users.put(a.getLoginName(),a.getPassword());
 
+		repository.save(a);
+		
 	}
 }
