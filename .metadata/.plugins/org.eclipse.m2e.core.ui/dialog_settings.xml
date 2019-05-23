@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\Self-Learning\code-git\iSkool-services"/>
 			<item value="D:\School-Management\School-Management"/>
 		</list>
 		<list key="projectNameTemplate">
