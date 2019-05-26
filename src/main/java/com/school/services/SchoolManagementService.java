@@ -6,14 +6,16 @@ import com.school.domain.Student;
 
 public interface SchoolManagementService {
 	
-public List<Student> getSuccessfulLoginMessage();
-
-boolean validateUser(Student stu);
+public List<Student> getAllUsers();
 
 public void addUser(Student a);
 
-public void deleteUser(int id);
+public boolean deleteUser(int id);
 
-public void fetchUserDataById(int id);
-	
+public Student fetchUserDataById(int id);
+
+public String updateUser(Student student);
+
+public List<Student> fetchByUsingRequestParamFilter(Integer id, String country);
+
 }

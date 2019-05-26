@@ -7,7 +7,7 @@ import com.school.domain.Student;
 
 public interface SchoolManagementRepository extends MongoRepository<Student, String> {
 
-   public void deleteByUserId(int id);
+   public Long deleteByUserId(int id);
    
-   public void findByUserId(int id);
+   public Student findByUserId(int id);
 }

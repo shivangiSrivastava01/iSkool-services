@@ -5,8 +5,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>School-Management</name>
 	<description>My First Project for Spring Boot</description>
-	<groupId>org.springframework</groupId>
-	<artifactId>gs-accessing-data-mongodb</artifactId>
+	<groupId>com.school</groupId>
+	<artifactId>school-management</artifactId>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
