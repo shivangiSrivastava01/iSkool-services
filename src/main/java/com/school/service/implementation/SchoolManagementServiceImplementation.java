@@ -58,7 +58,7 @@ public class SchoolManagementServiceImplementation implements SchoolManagementSe
 	public List<Student> fetchByUsingRequestParamFilter(Integer id, String country) {
 		List<Student> stuList = new ArrayList<Student>();
 		List<Student> list = getAllUsers();
-		
+
 		for (Student l : list) {
 			if (id == null & country == null) {
 				return list;
@@ -75,7 +75,7 @@ public class SchoolManagementServiceImplementation implements SchoolManagementSe
 
 	@Override
 	public List<Student> getUserViaPagination(int page, int limit) {
-		
+
 		List<Student> studentList = new ArrayList<Student>();
 		PageRequest pageableRequest = PageRequest.of(page, limit);
 		Page<Student> users = repository.findAll(pageableRequest);
