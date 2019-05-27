@@ -18,4 +18,6 @@ public String updateUser(Student student);
 
 public List<Student> fetchByUsingRequestParamFilter(Integer id, String country);
 
+public List<Student> getUserViaPagination(int page, int limit);
+
 }

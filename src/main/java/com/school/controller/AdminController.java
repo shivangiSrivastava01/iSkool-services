@@ -75,4 +75,10 @@ public class AdminController {
 	{
 		return sc.fetchByUsingRequestParamFilter(id,country);
 	}
+	@RequestMapping(value = "/fetchByPagination",method = RequestMethod.GET)
+	public List<Student> getUsers(@RequestParam(value = "page", defaultValue = "0") int page,
+            @RequestParam(value = "limit", defaultValue = "30") int limit)
+	{
+		return sc.getUserViaPagination(page,limit);
+	}
 }

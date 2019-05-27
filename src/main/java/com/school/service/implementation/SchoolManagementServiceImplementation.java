@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import com.school.domain.ResponseConstants;
@@ -69,5 +71,15 @@ public class SchoolManagementServiceImplementation implements SchoolManagementSe
 			}
 		}
 		return stuList;
+	}
+
+	@Override
+	public List<Student> getUserViaPagination(int page, int limit) {
+		
+		List<Student> studentList = new ArrayList<Student>();
+		PageRequest pageableRequest = PageRequest.of(page, limit);
+		Page<Student> users = repository.findAll(pageableRequest);
+		studentList = users.getContent();
+		return studentList;
 	}
 }
